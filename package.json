@@ -1,0 +1,16 @@
+{
+  "name": "semantic-ui-scss-default",
+  "version": "2.4.1",
+  "title": "Semantic UI SCSS",
+  "description": "SCSS only distribution of Semantic UI",
+  "homepage": "http://www.semantic-ui.com",
+  "author": "Ryan Canfield <ryancanfield@me.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/canfie1d/semantic-ui-scss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/canfie1d/semantic-ui-scss"
+  }
+}

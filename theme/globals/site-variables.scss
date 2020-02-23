@@ -1,0 +1,731 @@
+/*******************************
+         Site Settings
+*******************************/
+
+/*-------------------
+       Fonts
+--------------------*/
+
+$fontname: "Lato" !default;
+$fontsmoothing: antialiased;
+
+$headerfont: $fontName, "Helvetica Neue", Arial, Helvetica, sans-serif;
+$pagefont: $fontName, "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+$bold: bold;
+$normal: normal;
+
+/*-------------------
+      Base Sizes
+--------------------*/
+
+/* This is the single variable that controls them all */
+$emsize: 16px !default;
+
+/* The size of page text  */
+$fontsize: 16px !default;
+
+/*-------------------
+    Border Radius
+--------------------*/
+
+/* See Power-user section below
+   for explanation of $px variables
+*/
+$relativeBorderRadius: $relative4px !default;
+$absoluteBorderRadius: $absolute4px !default;
+
+$defaultBorderRadius: $absoluteBorderRadius !default;
+
+/*-------------------
+    Brand Colors
+--------------------*/
+
+$primarycolor: $blue !default;
+$secondarycolor: $black !default;
+
+$lightprimarycolor: $lightBlue !default;
+$lightsecondarycolor: $lightBlack !default;
+
+/*--------------
+  Page Heading
+---------------*/
+
+$headerfontweight: $bold !default;
+$headerlineheight: strip-unit((18 / 14), em) !default;
+
+$h1: strip-unit((28 / 14), rem) !default;
+$h2: strip-unit((24 / 14), rem) !default;
+$h3: strip-unit((18 / 14), rem) !default;
+$h4: strip-unit((15 / 14), rem) !default;
+$h5: strip-unit((14 / 14), rem) !default;
+
+/*--------------
+   Form Input
+---------------*/
+
+/* This adjusts the default form input across all elements */
+$inputbackground: $white !default;
+$inputverticalpadding: $relative11px !default;
+$inputhorizontalpadding: $relative14px !default;
+$inputpadding: $inputVerticalPadding $inputHorizontalPadding !default;
+
+/* Input Text Color */
+$inputColor: $textColor !default;
+$inputPlaceholderColor: lighten($inputColor, 75) !default;
+$inputPlaceholderFocusColor: lighten($inputColor, 45) !default;
+
+/* Line Height Default For Inputs in Browser (Descenders are 17px at 14px base em) */
+$inputLineHeight: strip-unit((17 / 14), em) !default;
+
+/*-------------------
+    Focused Input
+--------------------*/
+
+/* Used on inputs, textarea etc */
+$focusedFormBorderColor: #85b7d9 !default;
+
+/* Used on dropdowns, other larger blocks */
+$focusedFormMutedBorderColor: #96c8da !default;
+
+/*-------------------
+        Sizes
+--------------------*/
+
+/*
+  Sizes are all expressed in terms of 14px/em (default em)
+  This ensures these "ratios" remain constant despite changes in EM
+*/
+
+$minisize: (11 / 14);
+$tinysize: (12 / 14);
+$smallsize: (13 / 14);
+$mediumsize: (14 / 14);
+$largesize: (16 / 14);
+$bigsize: (18 / 14);
+$hugesize: (20 / 14);
+$massivesize: (24 / 14);
+
+/*-------------------
+        Page
+--------------------*/
+
+$pagebackground: #ffffff !default;
+$pageoverflowx: hidden;
+
+$lineheight: 1.4285em !default;
+$textcolor: rgba(0, 0, 0, 0.87) !default;
+
+/*-------------------
+      Paragraph
+--------------------*/
+
+$paragraphmargin: 0em 0em 1em !default;
+$paragraphlineheight: $lineHeight !default;
+
+/*-------------------
+       Links
+--------------------*/
+
+$linkcolor: #4183c4 !default;
+$linkunderline: none !default;
+$linkhovercolor: darken(saturate($linkColor, 20), 15, relative) !default;
+$linkhoverunderline: $linkUnderline !default;
+
+/*-------------------
+    Scroll Bars
+--------------------*/
+
+$useCustomScrollbars: true !default;
+
+$customScrollbarWidth: 10px !default;
+$customScrollbarHeight: 10px !default;
+
+$trackBackground: rgba(0, 0, 0, 0.1) !default;
+$trackBorderRadius: 0px !default;
+
+$thumbBorderRadius: 5px !default;
+$thumbBackground: rgba(0, 0, 0, 0.25) !default;
+$thumbTransition: color 0.2s ease !default;
+
+$thumbInactiveBackground: rgba(0, 0, 0, 0.15) !default;
+$thumbHoverBackground: rgba(128, 135, 139, 0.8) !default;
+
+/* Inverted */
+$trackInvertedBackground: rgba(255, 255, 255, 0.1) !default;
+$thumbInvertedBackground: rgba(255, 255, 255, 0.25) !default;
+$thumbInvertedInactiveBackground: rgba(255, 255, 255, 0.15) !default;
+$thumbInvertedHoverBackground: rgba(255, 255, 255, 0.35) !default;
+
+/*-------------------
+  Highlighted Text
+--------------------*/
+
+$highlightbackground: #cce2ff !default;
+$highlightcolor: $textColor !default;
+
+$inputhighlightbackground: rgba(100, 100, 100, 0.4) !default;
+$inputhighlightcolor: $textColor !default;
+
+/*-------------------
+       Loader
+--------------------*/
+
+$loadersize: $relativeBig !default;
+$loaderspeed: 0.6s !default;
+$loaderlinewidth: 0.2em !default;
+$loaderfillcolor: rgba(0, 0, 0, 0.1) !default;
+$loaderlinecolor: $grey !default;
+
+$invertedloaderfillcolor: rgba(255, 255, 255, 0.15) !default;
+$invertedloaderlinecolor: $white !default;
+
+/*-------------------
+        Grid
+--------------------*/
+
+$columnCount: 16 !default;
+
+/*-------------------
+     Transitions
+--------------------*/
+
+$defaultduration: 0.1s !default;
+$defaulteasing: ease !default;
+
+/*-------------------
+     Breakpoints
+--------------------*/
+
+$mobilebreakpoint: 320px !default;
+$tabletbreakpoint: 768px !default;
+$computerbreakpoint: 992px !default;
+$largemonitorbreakpoint: 1200px !default;
+$widescreenmonitorbreakpoint: 1920px !default;
+
+/*-------------------
+      Site Colors
+--------------------*/
+
+/*---  Colors  ---*/
+$red: #db2828 !default;
+$orange: #f2711c !default;
+$yellow: #fbbd08 !default;
+$olive: #b5cc18 !default;
+$green: #21ba45 !default;
+$teal: #00b5ad !default;
+$blue: #2185d0 !default;
+$violet: #6435c9 !default;
+$purple: #a333c8 !default;
+$pink: #e03997 !default;
+$brown: #a5673f !default;
+$grey: #767676 !default;
+$black: #1b1c1d !default;
+
+/*---  Light Colors  ---*/
+$lightred: #ff695e !default;
+$lightorange: #ff851b !default;
+$lightyellow: #ffe21f !default;
+$lightolive: #d9e778 !default;
+$lightgreen: #2ecc40 !default;
+$lightteal: #6dffff !default;
+$lightblue: #54c8ff !default;
+$lightviolet: #a291fb !default;
+$lightpurple: #dc73ff !default;
+$lightpink: #ff8edf !default;
+$lightbrown: #d67c1c !default;
+$lightgrey: #dcddde !default;
+$lightblack: #545454 !default;
+
+/*---   Neutrals  ---*/
+$fullblack: #000000 !default;
+$offwhite: #f9fafb !default;
+$darkwhite: #f3f4f5 !default;
+$midwhite: #dcddde !default;
+$white: #ffffff !default;
+
+/*--- Colored Backgrounds ---*/
+$redbackground: #ffe8e6 !default;
+$orangebackground: #ffedde !default;
+$yellowbackground: #fff8db !default;
+$olivebackground: #fbfdef !default;
+$greenbackground: #e5f9e7 !default;
+$tealbackground: #e1f7f7 !default;
+$bluebackground: #dff0ff !default;
+$violetbackground: #eae7ff !default;
+$purplebackground: #f6e7ff !default;
+$pinkbackground: #ffe3fb !default;
+$brownbackground: #f1e2d3 !default;
+
+/*--- Colored Headers ---*/
+$redheadercolor: darken($redTextColor, 5) !default;
+$oliveheadercolor: darken($oliveTextColor, 5) !default;
+$greenheadercolor: darken($greenTextColor, 5) !default;
+$yellowheadercolor: darken($yellowTextColor, 5) !default;
+$blueheadercolor: darken($blueTextColor, 5) !default;
+$tealheadercolor: darken($tealTextColor, 5) !default;
+$pinkheadercolor: darken($pinkTextColor, 5) !default;
+$violetheadercolor: darken($violetTextColor, 5) !default;
+$purpleheadercolor: darken($purpleTextColor, 5) !default;
+$orangeheadercolor: darken($orangeTextColor, 5) !default;
+$brownheadercolor: darken($brownTextColor, 5) !default;
+
+/*--- Colored Text ---*/
+$redtextcolor: $red !default;
+$orangetextcolor: $orange !default;
+$yellowtextcolor: #b58105 !default; // Yellow text is difficult to read
+$olivetextcolor: #8abc1e !default; // Olive is difficult to read
+$greentextcolor: #1ebc30 !default; // Green is difficult to read
+$tealtextcolor: #10a3a3 !default; // Teal text is difficult to read
+$bluetextcolor: $blue !default;
+$violettextcolor: $violet !default;
+$purpletextcolor: $purple !default;
+$pinktextcolor: $pink !default;
+$browntextcolor: $brown !default;
+
+/*--- Colored Border ---*/
+$redbordercolor: $redTextColor !default;
+$orangebordercolor: $orangeTextColor !default;
+$yellowbordercolor: $yellowTextColor !default;
+$olivebordercolor: $oliveTextColor !default;
+$greenbordercolor: $greenTextColor !default;
+$tealbordercolor: $tealTextColor !default;
+$bluebordercolor: $blueTextColor !default;
+$violetbordercolor: $violetTextColor !default;
+$purplebordercolor: $purpleTextColor !default;
+$pinkbordercolor: $pinkTextColor !default;
+$brownbordercolor: $brownTextColor !default;
+
+/*-------------------
+     Alpha Colors
+--------------------*/
+
+$subtletransparentblack: rgba(0, 0, 0, 0.03) !default;
+$transparentblack: rgba(0, 0, 0, 0.05) !default;
+$strongtransparentblack: rgba(0, 0, 0, 0.1) !default;
+$verystrongtransparentblack: rgba(0, 0, 0, 0.15) !default;
+
+$subtletransparentwhite: rgba(255, 255, 255, 0.02) !default;
+$transparentwhite: rgba(255, 255, 255, 0.08) !default;
+$strongtransparentwhite: rgba(255, 255, 255, 0.15) !default;
+
+/*-------------------
+       Accents
+--------------------*/
+
+/* Differentiating Neutrals */
+$subtleGradient: linear-gradient(transparent, $transparentBlack) !default;
+
+/* Differentiating Layers */
+$subtleShadow: 0px 1px 2px 0 $borderColor !default;
+$floatingShadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.12),
+  0px 2px 10px 0px rgba(34, 36, 38, 0.15) !default;
+
+/*******************************
+           Power-User
+*******************************/
+
+/*-------------------
+    Emotive Colors
+--------------------*/
+
+/* Positive */
+$positivecolor: $green !default;
+$positivebackgroundcolor: #fcfff5 !default;
+$positivebordercolor: #a3c293 !default;
+$positiveheadercolor: #1a531b !default;
+$positivetextcolor: #2c662d !default;
+
+/* Negative */
+$negativecolor: $red !default;
+$negativebackgroundcolor: #fff6f6 !default;
+$negativebordercolor: #e0b4b4 !default;
+$negativeheadercolor: #912d2b !default;
+$negativetextcolor: #9f3a38 !default;
+
+/* Info */
+$infocolor: #31ccec !default;
+$infobackgroundcolor: #f8ffff !default;
+$infobordercolor: #a9d5de !default;
+$infoheadercolor: #0e566c !default;
+$infotextcolor: #276f86 !default;
+
+/* Warning */
+$warningcolor: #f2c037 !default;
+$warningbordercolor: #c9ba9b !default;
+$warningbackgroundcolor: #fffaf3 !default;
+$warningheadercolor: #794b02 !default;
+$warningtextcolor: #573a08 !default;
+
+/*-------------------
+        Paths
+--------------------*/
+
+/* For source only. Modified in gulp for dist */
+$imagepath: "theme/assets/images" !default;
+$fontpath: "theme/assets/fonts" !default;
+
+/*-------------------
+       Em Sizes
+--------------------*/
+
+/*
+  This rounds $size values to the closest pixel then expresses that value in (r)em.
+  This ensures all size values round to exact pixels
+*/
+$mini: strip-unit(round($miniSize * $emSize) / $emSize, rem) !default;
+$tiny: strip-unit(round($tinySize * $emSize) / $emSize, rem) !default;
+$small: strip-unit(round($smallSize * $emSize) / $emSize, rem) !default;
+$medium: strip-unit(round($mediumSize * $emSize) / $emSize, rem) !default;
+$large: strip-unit(round($largeSize * $emSize) / $emSize, rem) !default;
+$big: strip-unit(round($bigSize * $emSize) / $emSize, rem) !default;
+$huge: strip-unit(round($hugeSize * $emSize) / $emSize, rem) !default;
+$massive: strip-unit(round($massiveSize * $emSize) / $emSize, rem) !default;
+
+/* em */
+$relativemini: strip-unit(round($miniSize * $emSize) / $emSize, em) !default;
+$relativetiny: strip-unit(round($tinySize * $emSize) / $emSize, em) !default;
+$relativesmall: strip-unit(round($smallSize * $emSize) / $emSize, em) !default;
+$relativemedium: strip-unit(
+  round($mediumSize * $emSize) / $emSize,
+  em
+) !default;
+$relativelarge: strip-unit(round($largeSize * $emSize) / $emSize, em) !default;
+$relativebig: strip-unit(round($bigSize * $emSize) / $emSize, em) !default;
+$relativehuge: strip-unit(round($hugeSize * $emSize) / $emSize, em) !default;
+$relativemassive: strip-unit(
+  round($massiveSize * $emSize) / $emSize,
+  em
+) !default;
+
+/* rem */
+$absolutemini: strip-unit(round($miniSize * $emSize) / $emSize, rem) !default;
+$absolutetiny: strip-unit(round($tinySize * $emSize) / $emSize, rem) !default;
+$absolutesmall: strip-unit(round($smallSize * $emSize) / $emSize, rem) !default;
+$absolutemedium: strip-unit(
+  round($mediumSize * $emSize) / $emSize,
+  rem
+) !default;
+$absolutelarge: strip-unit(round($largeSize * $emSize) / $emSize, rem) !default;
+$absolutebig: strip-unit(round($bigSize * $emSize) / $emSize, rem) !default;
+$absolutehuge: strip-unit(round($hugeSize * $emSize) / $emSize, rem) !default;
+$absolutemassive: strip-unit(
+  round($massiveSize * $emSize) / $emSize,
+  rem
+) !default;
+
+/*-------------------
+       Icons
+--------------------*/
+
+/* Maximum Glyph Width of Icon */
+$iconwidth: 1.18em !default;
+
+/*-------------------
+     Neutral Text
+--------------------*/
+
+$darktextcolor: rgba(0, 0, 0, 0.85) !default;
+$mutedtextcolor: rgba(0, 0, 0, 0.6) !default;
+$lighttextcolor: rgba(0, 0, 0, 0.4) !default;
+
+$unselectedtextcolor: rgba(0, 0, 0, 0.4) !default;
+$hoveredtextcolor: rgba(0, 0, 0, 0.8) !default;
+$pressedtextcolor: rgba(0, 0, 0, 0.9) !default;
+$selectedtextcolor: rgba(0, 0, 0, 0.95) !default;
+$disabledtextcolor: rgba(0, 0, 0, 0.2) !default;
+
+$invertedtextcolor: rgba(255, 255, 255, 0.9) !default;
+$invertedmutedtextcolor: rgba(255, 255, 255, 0.8) !default;
+$invertedlighttextcolor: rgba(255, 255, 255, 0.7) !default;
+$invertedunselectedtextcolor: rgba(255, 255, 255, 0.5) !default;
+$invertedhoveredtextcolor: rgba(255, 255, 255, 1) !default;
+$invertedpressedtextcolor: rgba(255, 255, 255, 1) !default;
+$invertedselectedtextcolor: rgba(255, 255, 255, 1) !default;
+$inverteddisabledtextcolor: rgba(255, 255, 255, 0.2) !default;
+
+/*-------------------
+     Brand Colors
+--------------------*/
+
+$facebookcolor: #3b5998 !default;
+$twittercolor: #55acee !default;
+$googlepluscolor: #dd4b39 !default;
+$linkedincolor: #1f88be !default;
+$youtubecolor: #ff0000 !default;
+$pinterestcolor: #bd081c !default;
+$vkcolor: #4d7198 !default;
+$instagramcolor: #49769c !default;
+
+/*-------------------
+      Borders
+--------------------*/
+
+$circularradius: 500rem !default;
+
+$bordercolor: rgba(34, 36, 38, 0.15) !default;
+$strongbordercolor: rgba(34, 36, 38, 0.22) !default;
+$internalbordercolor: rgba(34, 36, 38, 0.1) !default;
+$selectedbordercolor: rgba(34, 36, 38, 0.35) !default;
+$strongselectedbordercolor: rgba(34, 36, 38, 0.5) !default;
+$disabledbordercolor: rgba(34, 36, 38, 0.5) !default;
+
+$solidinternalbordercolor: #fafafa !default;
+$solidbordercolor: #d4d4d5 !default;
+$solidselectedbordercolor: #bcbdbd !default;
+
+$whitebordercolor: rgba(255, 255, 255, 0.1) !default;
+$selectedwhitebordercolor: rgba(255, 255, 255, 0.8) !default;
+
+$solidwhitebordercolor: #555555 !default;
+$selectedsolidwhitebordercolor: #999999 !default;
+
+/*-------------------
+    Derived Values
+--------------------*/
+
+/* Loaders Position Offset */
+$loaderoffset: -($loaderSize / 2) !default;
+$loadermargin: $loaderOffset 0em 0em $loaderOffset !default;
+
+/* Rendered Scrollbar Width */
+$scrollbarWidth: 17px !default;
+
+/* Maximum Single Character Glyph Width, aka Capital "W" */
+$glyphWidth: 1.1em !default;
+
+/* Used to match floats with text */
+$lineheightoffset: (($lineHeight - 1em) / 2) !default;
+$headerlineheightoffset: ($headerLineHeight - 1em) / 2 !default;
+
+/* Header Spacing */
+$headertopmargin: calc(2rem - #{$headerLineHeightOffset}) !default;
+$headerbottommargin: 1rem !default;
+$headermargin: $headerTopMargin 0em $headerBottomMargin !default;
+
+/* Minimum Mobile Width */
+$pageminwidth: 320px !default;
+
+/* Positive / Negative Dupes */
+$successbackgroundcolor: $positiveBackgroundColor !default;
+$successcolor: $positiveColor !default;
+$successbordercolor: $positiveBorderColor !default;
+$successheadercolor: $positiveHeaderColor !default;
+$successtextcolor: $positiveTextColor !default;
+
+$errorbackgroundcolor: $negativeBackgroundColor !default;
+$errorcolor: $negativeColor !default;
+$errorbordercolor: $negativeBorderColor !default;
+$errorheadercolor: $negativeHeaderColor !default;
+$errortextcolor: $negativeTextColor !default;
+
+/* Responsive */
+$largestmobilescreen: ($tabletBreakpoint - 1px) !default;
+$largesttabletscreen: ($computerBreakpoint - 1px) !default;
+$largestsmallmonitor: ($largeMonitorBreakpoint - 1px) !default;
+$largestlargemonitor: ($widescreenMonitorBreakpoint - 1px) !default;
+
+/*-------------------
+  Exact Pixel Values
+--------------------*/
+/*
+  These are used to specify exact pixel values in em
+  for things like borders that remain constantly
+  sized as emSize adjusts
+
+  Since there are many more sizes than names for sizes,
+  these are named by their original pixel values.
+
+*/
+
+@function strip-unit($number, $newUnit: false) {
+  @if ($newUnit) {
+    @return $number / ($number * 0 + 1) + $newUnit;
+  }
+  @return $number / ($number * 0 + 1);
+}
+
+$absolute1px: strip-unit((1 / $emSize), rem) !default;
+$absolute2px: strip-unit((2 / $emSize), rem) !default;
+$absolute3px: strip-unit((3 / $emSize), rem) !default;
+$absolute4px: strip-unit((4 / $emSize), rem) !default;
+$absolute5px: strip-unit((5 / $emSize), rem) !default;
+$absolute6px: strip-unit((6 / $emSize), rem) !default;
+$absolute7px: strip-unit((7 / $emSize), rem) !default;
+$absolute8px: strip-unit((8 / $emSize), rem) !default;
+$absolute9px: strip-unit((9 / $emSize), rem) !default;
+$absolute10px: strip-unit((10 / $emSize), rem) !default;
+$absolute11px: strip-unit((11 / $emSize), rem) !default;
+$absolute12px: strip-unit((12 / $emSize), rem) !default;
+$absolute13px: strip-unit((13 / $emSize), rem) !default;
+$absolute14px: strip-unit((14 / $emSize), rem) !default;
+$absolute15px: strip-unit((15 / $emSize), rem) !default;
+$absolute16px: strip-unit((16 / $emSize), rem) !default;
+$absolute17px: strip-unit((17 / $emSize), rem) !default;
+$absolute18px: strip-unit((18 / $emSize), rem) !default;
+$absolute19px: strip-unit((19 / $emSize), rem) !default;
+$absolute20px: strip-unit((20 / $emSize), rem) !default;
+$absolute21px: strip-unit((21 / $emSize), rem) !default;
+$absolute22px: strip-unit((22 / $emSize), rem) !default;
+$absolute23px: strip-unit((23 / $emSize), rem) !default;
+$absolute24px: strip-unit((24 / $emSize), rem) !default;
+$absolute25px: strip-unit((25 / $emSize), rem) !default;
+$absolute26px: strip-unit((26 / $emSize), rem) !default;
+$absolute27px: strip-unit((27 / $emSize), rem) !default;
+$absolute28px: strip-unit((28 / $emSize), rem) !default;
+$absolute29px: strip-unit((29 / $emSize), rem) !default;
+$absolute30px: strip-unit((30 / $emSize), rem) !default;
+$absolute31px: strip-unit((31 / $emSize), rem) !default;
+$absolute32px: strip-unit((32 / $emSize), rem) !default;
+$absolute33px: strip-unit((33 / $emSize), rem) !default;
+$absolute34px: strip-unit((34 / $emSize), rem) !default;
+$absolute35px: strip-unit((35 / $emSize), rem) !default;
+$absolute36px: strip-unit((36 / $emSize), rem) !default;
+$absolute37px: strip-unit((37 / $emSize), rem) !default;
+$absolute38px: strip-unit((38 / $emSize), rem) !default;
+$absolute39px: strip-unit((39 / $emSize), rem) !default;
+$absolute40px: strip-unit((40 / $emSize), rem) !default;
+$absolute41px: strip-unit((41 / $emSize), rem) !default;
+$absolute42px: strip-unit((42 / $emSize), rem) !default;
+$absolute43px: strip-unit((43 / $emSize), rem) !default;
+$absolute44px: strip-unit((44 / $emSize), rem) !default;
+$absolute45px: strip-unit((45 / $emSize), rem) !default;
+$absolute46px: strip-unit((46 / $emSize), rem) !default;
+$absolute47px: strip-unit((47 / $emSize), rem) !default;
+$absolute48px: strip-unit((48 / $emSize), rem) !default;
+$absolute49px: strip-unit((49 / $emSize), rem) !default;
+$absolute50px: strip-unit((50 / $emSize), rem) !default;
+$absolute51px: strip-unit((51 / $emSize), rem) !default;
+$absolute52px: strip-unit((52 / $emSize), rem) !default;
+$absolute53px: strip-unit((53 / $emSize), rem) !default;
+$absolute54px: strip-unit((54 / $emSize), rem) !default;
+$absolute55px: strip-unit((55 / $emSize), rem) !default;
+$absolute56px: strip-unit((56 / $emSize), rem) !default;
+$absolute57px: strip-unit((57 / $emSize), rem) !default;
+$absolute58px: strip-unit((58 / $emSize), rem) !default;
+$absolute59px: strip-unit((59 / $emSize), rem) !default;
+$absolute60px: strip-unit((60 / $emSize), rem) !default;
+$absolute61px: strip-unit((61 / $emSize), rem) !default;
+$absolute62px: strip-unit((62 / $emSize), rem) !default;
+$absolute63px: strip-unit((63 / $emSize), rem) !default;
+$absolute64px: strip-unit((64 / $emSize), rem) !default;
+
+$relative1px: strip-unit((1 / $emSize), em) !default;
+$relative2px: strip-unit((2 / $emSize), em) !default;
+$relative3px: strip-unit((3 / $emSize), em) !default;
+$relative4px: strip-unit((4 / $emSize), em) !default;
+$relative5px: strip-unit((5 / $emSize), em) !default;
+$relative6px: strip-unit((6 / $emSize), em) !default;
+$relative7px: strip-unit((7 / $emSize), em) !default;
+$relative8px: strip-unit((8 / $emSize), em) !default;
+$relative9px: strip-unit((9 / $emSize), em) !default;
+$relative10px: strip-unit((10 / $emSize), em) !default;
+$relative11px: strip-unit((11 / $emSize), em) !default;
+$relative12px: strip-unit((12 / $emSize), em) !default;
+$relative13px: strip-unit((13 / $emSize), em) !default;
+$relative14px: strip-unit((14 / $emSize), em) !default;
+$relative15px: strip-unit((15 / $emSize), em) !default;
+$relative16px: strip-unit((16 / $emSize), em) !default;
+$relative17px: strip-unit((17 / $emSize), em) !default;
+$relative18px: strip-unit((18 / $emSize), em) !default;
+$relative19px: strip-unit((19 / $emSize), em) !default;
+$relative20px: strip-unit((20 / $emSize), em) !default;
+$relative21px: strip-unit((21 / $emSize), em) !default;
+$relative22px: strip-unit((22 / $emSize), em) !default;
+$relative23px: strip-unit((23 / $emSize), em) !default;
+$relative24px: strip-unit((24 / $emSize), em) !default;
+$relative25px: strip-unit((25 / $emSize), em) !default;
+$relative26px: strip-unit((26 / $emSize), em) !default;
+$relative27px: strip-unit((27 / $emSize), em) !default;
+$relative28px: strip-unit((28 / $emSize), em) !default;
+$relative29px: strip-unit((29 / $emSize), em) !default;
+$relative30px: strip-unit((30 / $emSize), em) !default;
+$relative31px: strip-unit((31 / $emSize), em) !default;
+$relative32px: strip-unit((32 / $emSize), em) !default;
+$relative33px: strip-unit((33 / $emSize), em) !default;
+$relative34px: strip-unit((34 / $emSize), em) !default;
+$relative35px: strip-unit((35 / $emSize), em) !default;
+$relative36px: strip-unit((36 / $emSize), em) !default;
+$relative37px: strip-unit((37 / $emSize), em) !default;
+$relative38px: strip-unit((38 / $emSize), em) !default;
+$relative39px: strip-unit((39 / $emSize), em) !default;
+$relative40px: strip-unit((40 / $emSize), em) !default;
+$relative41px: strip-unit((41 / $emSize), em) !default;
+$relative42px: strip-unit((42 / $emSize), em) !default;
+$relative43px: strip-unit((43 / $emSize), em) !default;
+$relative44px: strip-unit((44 / $emSize), em) !default;
+$relative45px: strip-unit((45 / $emSize), em) !default;
+$relative46px: strip-unit((46 / $emSize), em) !default;
+$relative47px: strip-unit((47 / $emSize), em) !default;
+$relative48px: strip-unit((48 / $emSize), em) !default;
+$relative49px: strip-unit((49 / $emSize), em) !default;
+$relative50px: strip-unit((50 / $emSize), em) !default;
+$relative51px: strip-unit((51 / $emSize), em) !default;
+$relative52px: strip-unit((52 / $emSize), em) !default;
+$relative53px: strip-unit((53 / $emSize), em) !default;
+$relative54px: strip-unit((54 / $emSize), em) !default;
+$relative55px: strip-unit((55 / $emSize), em) !default;
+$relative56px: strip-unit((56 / $emSize), em) !default;
+$relative57px: strip-unit((57 / $emSize), em) !default;
+$relative58px: strip-unit((58 / $emSize), em) !default;
+$relative59px: strip-unit((59 / $emSize), em) !default;
+$relative60px: strip-unit((60 / $emSize), em) !default;
+$relative61px: strip-unit((61 / $emSize), em) !default;
+$relative62px: strip-unit((62 / $emSize), em) !default;
+$relative63px: strip-unit((63 / $emSize), em) !default;
+$relative64px: strip-unit((64 / $emSize), em) !default;
+
+/* Columns */
+$onewide: (1 / $columnCount * 100%) !default;
+$twowide: (2 / $columnCount * 100%) !default;
+$threewide: (3 / $columnCount * 100%) !default;
+$fourwide: (4 / $columnCount * 100%) !default;
+$fivewide: (5 / $columnCount * 100%) !default;
+$sixwide: (6 / $columnCount * 100%) !default;
+$sevenwide: (7 / $columnCount * 100%) !default;
+$eightwide: (8 / $columnCount * 100%) !default;
+$ninewide: (9 / $columnCount * 100%) !default;
+$tenwide: (10 / $columnCount * 100%) !default;
+$elevenwide: (11 / $columnCount * 100%) !default;
+$twelvewide: (12 / $columnCount * 100%) !default;
+$thirteenwide: (13 / $columnCount * 100%) !default;
+$fourteenwide: (14 / $columnCount * 100%) !default;
+$fifteenwide: (15 / $columnCount * 100%) !default;
+$sixteenwide: (16 / $columnCount * 100%) !default;
+
+$onecolumn: (1 / 1 * 100%) !default;
+$twocolumn: (1 / 2 * 100%) !default;
+$threecolumn: (1 / 3 * 100%) !default;
+$fourcolumn: (1 / 4 * 100%) !default;
+$fivecolumn: (1 / 5 * 100%) !default;
+$sixcolumn: (1 / 6 * 100%) !default;
+$sevencolumn: (1 / 7 * 100%) !default;
+$eightcolumn: (1 / 8 * 100%) !default;
+$ninecolumn: (1 / 9 * 100%) !default;
+$tencolumn: (1 / 10 * 100%) !default;
+$elevencolumn: (1 / 11 * 100%) !default;
+$twelvecolumn: (1 / 12 * 100%) !default;
+$thirteencolumn: (1 / 13 * 100%) !default;
+$fourteencolumn: (1 / 14 * 100%) !default;
+$fifteencolumn: (1 / 15 * 100%) !default;
+$sixteencolumn: (1 / 16 * 100%) !default;
+
+/*******************************
+             States
+*******************************/
+
+/*-------------------
+      Disabled
+--------------------*/
+
+$disabledOpacity: 0.45 !default;
+$disabledTextColor: rgba(40, 40, 40, 0.3) !default;
+$invertedDisabledTextColor: rgba(225, 225, 225, 0.3) !default;
+
+/*-------------------
+        Hover
+--------------------*/
+
+/*---  Shadows  ---*/
+$floatingShadowHover: 0px 2px 4px 0px rgba(34, 36, 38, 0.15),
+  0px 2px 10px 0px rgba(34, 36, 38, 0.25) !default;
