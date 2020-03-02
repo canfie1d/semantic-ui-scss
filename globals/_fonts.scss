@@ -1,0 +1,55 @@
+$roboto-light: 'Roboto Light', sans-serif;
+$roboto: 'Roboto', sans-serif;
+$roboto-bold: 'Roboto Bold', sans-serif;
+$poppins: 'Poppins', sans-serif;
+$poppins-bold: 'Poppins Bold', sans-serif;
+
+@font-face {
+  font-family: 'Roboto Light';
+  font-weight: normal;
+  font-style: normal;
+  src: local('Roboto Light'),
+    url('./assets/fonts/roboto-light-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-style: normal;
+  src: local('Roboto Regular'),
+    url('./assets/fonts/roboto-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Bold';
+  font-weight: normal;
+  font-style: normal;
+  src: local('Roboto Bold'),
+    url('./assets/fonts/roboto-bold-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: normal;
+  font-style: normal;
+  src: local('Poppins'),
+    url('./assets/fonts/poppins-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Poppins Bold';
+  font-weight: normal;
+  font-style: normal;
+  src: local('Poppins Bold'),
+    url('./assets/fonts/poppins-bold-webfont.woff') format('woff');
+}
+
+///////////////////////////////
+//      Font Variables       //
+///////////////////////////////
+$display-font: $poppins;
+$display-font--bold: $poppins-bold;
+$body-font--light: $roboto-light;
+$body-font: $roboto;
+$body-font--bold: $roboto-bold;
+$default-body-font: $body-font !default;

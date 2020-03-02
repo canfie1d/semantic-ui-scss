@@ -1,0 +1,64 @@
+$brand-green: #3aad49;
+$brand-gray: #505554;
+
+//Accent Colors
+$black: #262626;
+$mustard: #ddb426;
+$coral: #fc664a;
+$stone: #c6c5b9;
+$smoke: #f2f2f2;
+$pine: #2d4434;
+$sky: #cde8e9;
+$aqua: #8bdcdb;
+
+//Primary
+$primary-color: $brand-green;
+$primary-color--hover: tint($primary-color, 10%);
+$primary-color--focus: shade($primary-color, 10%);
+$primary-color--active: tint($primary-color, 10%);
+$primary-color-active: tint($primary-color, 10%);
+
+$off-white: #f9f9f9;
+
+//Secondary
+$secondary-color: $brand-gray;
+$secondary-color--hover: shade($secondary-color, 5%);
+$secondary-color--focus: shade($secondary-color, 5%);
+$secondary-color--active: shade($secondary-color, 5%);
+$secondary-color-active: shade($secondary-color, 5%);
+
+//Default
+$default-font-color: shade($brand-gray, 20%) !default;
+$default-secondary-font-color: $brand-gray !default;
+$default-background-color: $off-white !default;
+$default-link-color: #4183c4 !default;
+$default-hover-link-color: #1e70bf !default;
+$default-border-color: tint($secondary-color, 85%);
+
+//Basic
+$red: #db2828 !default;
+$orange: #f2711c !default;
+$yellow: #fbbd08 !default;
+$olive: #b5cc18 !default;
+$green: #21ba45 !default;
+$teal: #00b5ad !default;
+$blue: #2185d0 !default;
+$violet: #6435c9 !default;
+$purple: #a333c8 !default;
+$pink: #e03997 !default;
+$brown: #a5673f !default;
+$grey: #767676 !default;
+$white: #ffffff !default;
+$inverted-label: rgba(255, 255, 255, 0.9) !default;
+$inverted-red: #ff695e !default;
+$inverted-orange: #ff851b !default;
+$inverted-yellow: #ffe21f !default;
+$inverted-olive: #d9e778 !default;
+$inverted-green: #2ecc40 !default;
+$inverted-teal: #6dffff !default;
+$inverted-blue: #54c8ff !default;
+$inverted-violet: #a291fb !default;
+$inverted-purple: #dc73ff !default;
+$inverted-pink: #ff8edf !default;
+$inverted-brown: #d67c1c !default;
+$inverted-grey: #dcddde !default;

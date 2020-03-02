@@ -1,0 +1,78 @@
+/*!
+ * # Semantic UI 2.2.12 - Site
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+/*******************************
+             Page
+*******************************/
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: $body-font-size;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-width: 320px;
+  background: $body-bg-color;
+  font-family: $font-family;
+  font-size: $body-font-size;
+  line-height: 1.4285em;
+  color: $font-color;
+}
+
+/*******************************
+          Highlighting
+*******************************/
+
+/* Site */
+
+::-webkit-selection,
+::-moz-selection,
+::selection {
+  background-color: tint($primary-color, 50%);
+  color: $font-color;
+}
+
+/* Form */
+
+textarea::-webkit-selection,
+input::-webkit-selection,
+textarea::-moz-selection,
+input::-moz-selection,
+textarea::selection,
+input::selection {
+  background-color: tint($primary-color, 50%);
+  color: $font-color;
+}
+
+/* Force Simple Scrollbars */
+
+body {
+  .ui.inverted {
+    &::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.25);
+      &:window-inactive {
+        background: rgba(255, 255, 255, 0.15);
+      }
+      &:hover {
+        background: rgba(255, 255, 255, 0.35);
+      }
+    }
+  }
+}

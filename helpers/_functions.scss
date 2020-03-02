@@ -1,0 +1,44 @@
+// URL Manipulations
+
+@function semantic-image-url($path, $url) {
+  @if function-exists(image-url) {
+    @return image-url($url);
+  } @else {
+    @return url($path+$url);
+  }
+}
+
+@function semantic-font-url($url) {
+  @if function-exists(font-url) {
+    @return font-url($url);
+  } @else {
+    @return url($icons-font-path+$url);
+  }
+}
+
+////////////////////////
+//      REM CALC      //
+////////////////////////
+// REM BASE (font-size on html element)
+$rem-base: 16;
+
+@function rem($pxValues...) {
+  $result: ();
+
+  @each $pxValue in $pxValues {
+    $result: append($result, $pxValue/$rem-base + rem, space);
+  }
+
+  @return $result;
+}
+
+////////////////////////
+//     COLOR MATH     //
+////////////////////////
+@function tint($color, $percentage) {
+  @return mix(#fff, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(#000, $color, $percentage);
+}

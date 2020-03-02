@@ -1,0 +1,586 @@
+/*!
+ * # Semantic UI 2.2.12 - Modal
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+/*******************************
+             Modal
+*******************************/
+
+.ui.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 1900;
+  text-align: left;
+  background: $white;
+  border: 1px solid $default-border-color;
+  box-shadow: 0px 0px 20px rgba($secondary-color, 0.4) !important;
+  flex: 0 0 auto;
+  border-radius: 5px;
+  user-select: text;
+  will-change: top, left, margin, transform, opacity;
+
+  // This adds styles to the notifications form modal
+  // it should be refactored to be an actual form
+  // instead of adding styles here
+  .field.error input[type='text'] {
+    background: #fff6f6;
+    border-color: #e0b4b4;
+    color: #9f3a38;
+    border-radius: '';
+    box-shadow: none;
+  }
+}
+
+.ui.modal > :first-child:not(.icon),
+.ui.modal > .icon:first-child + * {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.ui.modal > :last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/*******************************
+            Content
+*******************************/
+
+/*--------------
+     Close
+---------------*/
+
+.ui.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  z-index: 1;
+
+  opacity: 0.4;
+  font-size: 1rem;
+  color: $white;
+
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: calc(2.25rem - 1em / 2) 0 0 0;
+}
+.ui.modal > .close:hover {
+  opacity: 1;
+}
+
+/*--------------
+     Header
+---------------*/
+
+.ui.modal > .header {
+  display: block;
+  font-family: $display-font;
+  background: $white;
+  padding: 1.5rem;
+  box-shadow: none;
+  margin: 0;
+  line-height: 1;
+  color: $default-font-color;
+  border-bottom: 1px solid $default-border-color;
+}
+
+.ui.modal > .header:not(.ui) {
+  font-size: 1.5rem;
+}
+
+/*--------------
+     Content
+---------------*/
+
+.ui.modal > .content {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.4;
+  padding: 1rem;
+  background: $white;
+}
+.ui.modal > .image.content {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Image */
+.ui.modal > .content > .image {
+  display: block;
+  flex: 0 1 auto;
+  width: auto;
+  align-self: top;
+}
+.ui.modal > [class*='top aligned'] {
+  align-self: top;
+}
+.ui.modal > [class*='middle aligned'] {
+  align-self: middle;
+}
+.ui.modal > [class*='stretched'] {
+  align-self: stretch;
+}
+
+/* Description */
+.ui.modal > .content > .description {
+  display: block;
+  flex: 1 0 auto;
+  min-width: 0px;
+  align-self: top;
+}
+
+.ui.modal > .content > .icon + .description,
+.ui.modal > .content > .image + .description {
+  flex: 0 1 auto;
+  min-width: none;
+  width: auto;
+  padding-left: 2rem;
+}
+
+/*rtl:ignore*/
+.ui.modal > .content > .image > i.icon {
+  margin: 0;
+  opacity: 1;
+  width: auto;
+  line-height: 1;
+  font-size: 8rem;
+}
+
+/*--------------
+     Actions
+---------------*/
+
+.ui.modal > .actions {
+  background: $off-white;
+  padding: 1rem;
+  border-top: 1px solid $default-border-color;
+  text-align: right;
+}
+.ui.modal .actions > .button {
+  margin-left: 0.75rem;
+}
+
+/*-------------------
+       Responsive
+--------------------*/
+
+/* Modal Width */
+@include max-screen($media-medium) {
+  .ui.modal {
+    width: auto;
+    margin: 95%;
+  }
+}
+
+@include min-screen($media-medium) {
+  .ui.modal {
+    width: 88%;
+    margin: 0;
+  }
+}
+@include min-screen($media-large) {
+  .ui.modal {
+    width: 850px;
+    margin: 0;
+  }
+}
+@include min-screen($media-xlarge) {
+  .ui.modal {
+    width: 900px;
+    margin: 0;
+  }
+}
+@include min-screen($media-xxlarge) {
+  .ui.modal {
+    width: 950px;
+    margin: 0;
+  }
+}
+
+// /* Tablet and Mobile */
+@include max-screen($media-large) {
+  .ui.modal > .header {
+    padding-right: 2.25rem;
+  }
+  .ui.modal > .close {
+    top: calc(0.5rem + 1.2 - 1rem);
+    right: 1rem;
+    color: $default-font-color;
+  }
+}
+
+// /* Mobile */
+@include max-screen($media-medium) {
+  .ui.modal > .header {
+    padding: 0.75rem 1rem !important;
+    padding-right: 2.25rem !important;
+  }
+  .ui.modal > .content {
+    display: block;
+    padding: 1rem !important;
+  }
+  .ui.modal > .close {
+    top: 0.5rem !important;
+    right: 0.5rem !important;
+  }
+
+  /*rtl:ignore*/
+  .ui.modal .image.content {
+    flex-direction: column;
+  }
+  .ui.modal .content > .image {
+    display: block;
+    max-width: 100%;
+    margin: 0em auto !important;
+    text-align: center;
+    padding: 0rem 0rem 1rem !important;
+  }
+  .ui.modal > .content > .image > i.icon {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  /*rtl:ignore*/
+  .ui.modal .content > .description {
+    display: block;
+    width: 100% !important;
+    margin: 0em !important;
+    padding: 1rem 0rem !important;
+    box-shadow: none;
+  }
+
+  /* Let Buttons Stack */
+  .ui.modal > .actions {
+    padding: 1rem 1rem 0 !important;
+  }
+  .ui.modal .actions > .buttons,
+  .ui.modal .actions > .button {
+    margin-bottom: 1rem;
+  }
+}
+
+/*--------------
+    Coupling
+---------------*/
+
+.ui.inverted.dimmer > .ui.modal {
+  box-shadow: none;
+}
+
+/*******************************
+             Types
+*******************************/
+
+.ui.basic.modal {
+  background-color: transparent;
+  border: none;
+  border-radius: 0em;
+  box-shadow: none !important;
+  color: $white;
+}
+.ui.basic.modal > .header,
+.ui.basic.modal > .content,
+.ui.basic.modal > .actions {
+  background-color: transparent;
+}
+.ui.basic.modal > .header {
+  color: $white;
+}
+.ui.basic.modal > .close {
+  top: 1rem;
+  right: 1.5rem;
+}
+
+.ui.inverted.dimmer > .basic.modal {
+  color: $default-font-color;
+}
+.ui.inverted.dimmer > .ui.basic.modal > .header {
+  color: $default-font-color;
+}
+
+/* Resort to margin positioning if legacy */
+.ui.legacy.modal,
+.ui.legacy.page.dimmer > .ui.modal {
+  top: 50%;
+  left: 50%;
+}
+
+.ui.legacy.page.dimmer > .ui.scrolling.modal,
+.ui.page.dimmer > .ui.scrolling.legacy.modal,
+.ui.top.aligned.legacy.page.dimmer > .ui.modal,
+.ui.top.aligned.dimmer > .ui.legacy.modal {
+  top: auto;
+}
+
+/* Tablet and Mobile */
+@include max-screen($media-large) {
+  .ui.basic.modal > .close {
+    color: $white;
+  }
+}
+
+/*******************************
+             States
+*******************************/
+
+.ui.loading.modal {
+  display: block;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.ui.active.modal {
+  display: block;
+}
+
+/*******************************
+           Variations
+*******************************/
+
+/*--------------
+   Top Aligned
+---------------*/
+
+/* Top Aligned Modal */
+.modals.dimmer[class*='top aligned'] .modal {
+  margin: 5vh auto;
+}
+@include max-screen($media-medium) {
+  .modals.dimmer[class*='top aligned'] .modal {
+    margin: 1rem auto;
+  }
+}
+/* Legacy Top Aligned */
+.legacy.modals.dimmer[class*='top aligned'] {
+  padding-top: 5vh;
+}
+
+@include max-screen($media-medium) {
+  .legacy.modals.dimmer[class*='top aligned'] {
+    padding-top: 1rem;
+  }
+}
+
+/*--------------
+    Scrolling
+---------------*/
+
+/* Scrolling Dimmer */
+.scrolling.dimmable.dimmed {
+  overflow: hidden;
+}
+.scrolling.dimmable > .dimmer {
+  justify-content: flex-start;
+}
+.scrolling.dimmable.dimmed > .dimmer {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.scrolling.dimmable > .dimmer {
+  position: fixed;
+}
+.modals.dimmer .ui.scrolling.modal {
+  margin: 1rem auto;
+}
+
+/* Undetached Scrolling */
+.scrolling.undetached.dimmable.dimmed {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.scrolling.undetached.dimmable.dimmed > .dimmer {
+  overflow: hidden;
+}
+.scrolling.undetached.dimmable .ui.scrolling.modal {
+  position: absolute;
+  left: 50%;
+  margin-top: 1rem !important;
+}
+
+/* Scrolling Content */
+.ui.modal .scrolling.content {
+  max-height: calc(80vh - 10rem);
+  overflow: auto;
+}
+
+/*--------------
+   Full Screen
+---------------*/
+
+.ui.fullscreen.modal {
+  width: 95% !important;
+  margin: 1rem auto;
+}
+.ui.fullscreen.modal > .header {
+  padding-right: 2.25rem;
+}
+.ui.fullscreen.modal > .close {
+  top: calc(0.5rem + 1.42857 - 1rem);
+  right: 1rem;
+  color: $default-font-color;
+}
+
+/*--------------
+      Size
+---------------*/
+
+.ui.modal {
+  font-size: 32px;
+}
+
+/* Mini */
+.ui.mini.modal > .header:not(.ui) {
+  font-size: 1.3rem;
+}
+
+/* Mini Modal Width */
+@include max-screen($media-medium) {
+  .ui.mini.modal {
+    width: 95%;
+    margin: 0;
+  }
+}
+@include min-screen($media-medium) {
+  .ui.mini.modal {
+    width: calc(88% - 0.6);
+    margin: 0;
+  }
+}
+@include min-screen($media-large) {
+  .ui.mini.modal {
+    width: calc(850px * 0.4);
+    margin: 0;
+  }
+}
+@include min-screen($media-large) {
+  .ui.mini.modal {
+    width: calc(900px * 0.4);
+    margin: 0;
+  }
+}
+@include min-screen($media-xlarge) {
+  .ui.mini.modal {
+    width: calc(1180px * 0.4);
+    margin: 0;
+  }
+}
+
+/* mini */
+.ui.small.modal > .header:not(.ui) {
+  font-size: 1.3rem;
+}
+
+/* Tiny Modal Width */
+@include max-screen($media-small) {
+  .ui.tiny.modal {
+    width: auto;
+    margin: 0;
+  }
+}
+@include min-screen($media-medium) {
+  .ui.tiny.modal {
+    width: calc(88% * 0.4);
+    margin: 0;
+  }
+}
+@include min-screen($media-large) {
+  .ui.tiny.modal {
+    width: calc(850px * 0.4);
+    margin: 0;
+  }
+}
+@include min-screen($media-large) {
+  .ui.tiny.modal {
+    width: calc(900px * 0.4);
+    margin: 0;
+  }
+}
+@include min-screen($media-xlarge) {
+  .ui.tiny.modal {
+    width: calc(950px * 0.4);
+    margin: 0;
+  }
+}
+
+/* Small */
+.ui.small.modal > .header:not(.ui) {
+  font-size: 1.3rem;
+}
+
+/* Small Modal Width */
+@include max-screen($media-medium) {
+  .ui.small.modal {
+    width: auto;
+    margin: 0;
+  }
+}
+@include min-screen($media-medium) {
+  .ui.small.modal {
+    width: calc(88% * 0.8);
+    margin: 0;
+  }
+}
+@include min-screen($media-large) {
+  .ui.small.modal {
+    width: calc(850px * 0.8);
+    margin: 0;
+  }
+}
+@include min-screen($media-large) {
+  .ui.small.modal {
+    width: calc(900px * 0.8);
+    margin: 0;
+  }
+}
+@include min-screen($media-xlarge) {
+  .ui.small.modal {
+    width: calc(950px * 0.8);
+    margin: 0;
+  }
+}
+
+/* Large Modal Width */
+.ui.large.modal > .header {
+  font-size: 1.6rem;
+}
+@include max-screen($media-medium) {
+  .ui.large.modal {
+    width: auto;
+    margin: 0;
+  }
+}
+@include min-screen($media-medium) {
+  .ui.large.modal {
+    width: 88%;
+    margin: 0;
+  }
+}
+@include min-screen($media-large) {
+  .ui.large.modal {
+    width: calc(850px * 1.2);
+    margin: 0;
+  }
+}
+@include min-screen($media-large) {
+  .ui.large.modal {
+    width: calc(900px * 1.2);
+    margin: 0;
+  }
+}
+@include min-screen($media-xlarge) {
+  .ui.large.modal {
+    width: calc(950px * 1.2);
+    margin: 0;
+  }
+}

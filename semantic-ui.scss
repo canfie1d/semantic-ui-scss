@@ -1,0 +1,71 @@
+@import "./globals/reset";
+@import "./helpers/functions";
+@import "./globals/colors";
+@import "./globals/fonts";
+
+$icons-font-path: "./styles/semantic-ui/icons/" !default;
+$flags-image-path: "./styles/semantic-ui/images/" !default;
+
+// Body
+$body-font-size: 16px !default;
+$body-bg-color: $default-background-color;
+
+//Font
+$font-family: $default-body-font;
+$font-color: $default-font-color;
+$font-color--light: tint($default-font-color, 90%);
+$secondary-font: $default-secondary-font-color;
+$a-font-color: $default-link-color;
+$a-hover-font-color: $default-hover-link-color;
+
+@import "./globals/mediaqueries";
+@import "./globals/site";
+@import "./globals/typography";
+
+@import "./elements/button";
+@import "./elements/container";
+@import "./elements/divider";
+@import "./elements/flag";
+@import "./elements/header";
+@import "./elements/icon";
+@import "./elements/image";
+@import "./elements/input";
+@import "./elements/label";
+@import "./elements/list";
+@import "./elements/loader";
+@import "./elements/rail";
+@import "./elements/reveal";
+@import "./elements/segment";
+@import "./elements/step";
+
+@import "./collections/breadcrumb";
+@import "./collections/form";
+@import "./collections/grid";
+@import "./collections/menu";
+@import "./collections/message";
+@import "./collections/table";
+
+@import "./views/ad";
+@import "./views/card";
+@import "./views/comment";
+@import "./views/feed";
+@import "./views/item";
+@import "./views/statistic";
+
+@import "./modules/accordion";
+@import "./modules/checkbox";
+@import "./modules/dimmer";
+@import "./modules/dropdown";
+@import "./modules/embed";
+@import "./modules/modal";
+@import "./modules/nag";
+@import "./modules/popup";
+@import "./modules/progress";
+@import "./modules/rating";
+@import "./modules/search";
+@import "./modules/shape";
+@import "./modules/sidebar";
+@import "./modules/sticky";
+@import "./modules/tab";
+@import "./modules/transition";
+@import "./modules/video";
